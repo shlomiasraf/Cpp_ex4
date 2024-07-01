@@ -5,14 +5,15 @@
 #include <stdexcept>
 
 template <typename T>
-class Node {
+class Node
+{
 private:
     T value;
     std::vector<Node<T>*> children;
 
 public:
-    T get_value() const;
-    Node(T);
+    Node(T val);
+    T getValue() const;
     void addChild(Node<T>* child);
     const std::vector<Node<T>*>& getChildren() const;
 };
